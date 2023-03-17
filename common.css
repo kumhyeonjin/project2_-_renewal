@@ -1,0 +1,759 @@
+:root {
+  --mw: 1440px;
+  --width: calc(100% - 4rem);
+  --gap1: 0.5rem;
+  --gap2: 4rem;
+  --font_logo1_700: "Noto Sans KR", sans-serif;
+  --font_logo2_100: "Noto Sans KR", sans-serif;
+  --font_con_title_500: "Noto Sans KR", sans-serif;
+  --font_con_intro1_400: "Noto Sans KR", sans-serif;
+  --font_con_intro2_300: "Noto Sans KR", sans-serif;
+  --font_color: #ffffff;
+  --font_color2: #000000;
+  --bg: #0c1946;
+  --color_p1: #f2d555;
+  --color_p2: #afc6d0;
+  --color_p3: #53a576;
+  --color_p4: #c7d6cc;
+  --color_p4: #e38489;
+  --font_size_con: 20px;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    #0c1946,
+    #1b2c69,
+    #36488b,
+    #6270a3,
+    #0c1946
+  );
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.mw {
+  max-width: var(--mw);
+  width: var(--width);
+  margin: auto;
+}
+
+a {
+  color: var(--font_color);
+}
+
+.hd {
+  margin-top: 3rem;
+  position: relative;
+  z-index: 100;
+}
+
+.hd .logo {
+  text-align: center;
+}
+
+.logo a {
+  font-family: var(--font_logo1_700);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 2rem;
+}
+
+.logo span {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.top_icons {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top_icons a,
+.top_icons i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}
+
+.top_icons a:hover {
+  font-weight: bold;
+  color: #c7d6cc;
+}
+
+/* nav */
+
+.gnb {
+  margin-top: 2rem;
+}
+.gnb a {
+  font-size: 24px;
+}
+
+.depth_1 {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  /* align-items: center; */
+  position: relative;
+}
+
+.depth_2 {
+  margin-top: 1rem;
+  line-height: 2.5rem;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.depth_1 > li {
+  /* border: 1px solid red; */
+  width: 20%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.depth_1 > li::before {
+  content: "";
+  position: absolute;
+  background-color: #c7d6cc;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 0;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.depth_2 a {
+  font-size: 20px;
+}
+.depth_1 > li > a {
+  display: block;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.depth_1 > li:hover::before {
+  height: 350px;
+}
+
+.depth_1 > li:hover a {
+  color: #0c1946;
+  opacity: 70%;
+  font-weight: bold;
+}
+
+.depth_1 li:hover .depth_2 {
+  height: 300px;
+}
+
+.depth_2 li:hover a {
+  opacity: 100%;
+}
+
+/* 가상테그 한 번에 붙이는 방법 */
+/* 헤더 어떻게 하는거였더라  */
+
+/* main */
+
+main {
+  /* display: none; */
+}
+
+*::before,
+*::after {
+  content: "";
+  position: absolute;
+}
+.sec1 {
+  border: 3px solid var(--color_p1);
+  border-radius: 40px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 2rem 0;
+  position: relative;
+}
+.sec1 a {
+  transition: 0.3s;
+}
+.sec1 a:hover {
+  color: #f2d555;
+}
+.sec1::before {
+  /* border: 1px solid lightblue; */
+  width: 20%;
+  padding-top: 80%;
+  top: -150%;
+  left: -60%;
+  background: url(./img/bg1_moon.png) no-repeat;
+  background-size: contain;
+}
+.sec1 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font_size_con);
+}
+
+.sec2 {
+  /* background-color: #9999; */
+  margin-top: 8%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  gap: var(--gap2) 1rem;
+  position: relative;
+}
+
+.sec2 .box {
+  /* border: 2px solid lightblue; */
+  border-radius: 1rem;
+  font-size: 14px;
+}
+
+.sec2 button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+}
+
+.box_title {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--gap1);
+  border-bottom: 2px solid #000000;
+  font-family: var(--font_con_title_500);
+  font-weight: 500;
+  font-size: 20px;
+}
+.box1 p,
+.box3 p,
+.box5 p,
+.box6 p,
+.box7 p {
+  line-height: 2rem;
+  border: 1px solid red;
+  padding: 1rem 0;
+  /* 중앙정렬을 하고 싶었어요 */
+  text-align: center;
+  font-family: var(--font_con_intro2_300);
+  font-size: 14px;
+  font-weight: 300;
+}
+.box1,
+.box3,
+.box5,
+.box6,
+.box7 {
+  border: 3px solid #000000;
+}
+.box span {
+  font-family: var(--font_con_intro1_400);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* br태그 없이 단 정렬하는 방법?
+display:block ? */
+
+.box1 {
+  /* height: 300px; */
+  border-radius: var(--gap1);
+  background-color: #f2d555;
+  position: relative;
+}
+
+.box1::before {
+  /* border: 1px solid lightblue; */
+  width: 15%;
+  height: 20%;
+  top: -20%;
+  background: url(./img/bg3_spacecraft.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.box2 {
+  border: 1px solid red;
+  position: relative;
+  /* 이영역은 뭐야;; */
+}
+
+.box2_1,
+.box2_2 {
+  border: 2px solid #000000;
+  border-radius: var(--gap1);
+  line-height: 1.5rem;
+  padding: 1rem 0;
+}
+.box2_1 p,
+.box2_2 p {
+  padding: var(--gap1);
+}
+
+.box2_1 {
+  background-color: var(--color_p3);
+}
+
+.box2_2 {
+  position: absolute;
+  width: 100%;
+  top: 75%;
+  transform: translateY(-50%);
+  background-color: var(--color_p2);
+}
+
+.box3 {
+  background-color: #f2d555;
+  position: relative;
+}
+
+.box3::before {
+  width: 65%;
+  /* border: 1px solid lightblue; */
+  height: 100%;
+  right: -60%;
+  top: -60%;
+  background: url(./img/bg2_Big_person.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.box4 {
+  position: relative;
+}
+
+.box4::before {
+  /* border: 1px solid lightblue; */
+  width: 30%;
+  height: 50%;
+  background: url(./img/bg4_Satellite.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  top: 25%;
+  left: -35%;
+}
+.box4_1,
+.box4_2 {
+  border: 3px solid #000000;
+  border-radius: 2rem;
+  line-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gap1);
+  background-color: var(--color_p4);
+  font-family: var(--font_con_title_500);
+  font-size: 20px;
+  font-weight: 500;
+  height: 30%;
+}
+
+.box4 button {
+  font-size: 24px;
+  position: absolute;
+  right: var(--gap1);
+}
+
+.box4_2 {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}
+
+.box5,
+.box6 {
+  grid-row: span 2;
+}
+
+.box5 {
+  position: relative;
+  margin-top: 3rem;
+  background-color: var(--color_p3);
+  position: relative;
+}
+.box5::before {
+  /* border: 1px solid lightblue; */
+  width: 20%;
+  height: 20%;
+  top: -20%;
+  right: 0;
+  background: url(./img/bg5_Small_person.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.box5 img {
+  margin-left: 10%;
+  width: 80%;
+}
+.box5 .swiper,
+.box6 .swiper {
+  position: absolute;
+  /* border: 10px solid red; */
+  width: 100%;
+  height: calc(100% - 50px);
+}
+.box5 .swiper-slide,
+.box6 .swiper-slide {
+  padding-top: 2rem;
+}
+
+.box5 p {
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.box5 span {
+  color: tomato;
+}
+
+.box5 .next1,
+.box5 .prev1,
+.box6 .next1,
+.box6 .prev1 {
+  position: absolute;
+  top: 25%;
+  color: #000000;
+  width: 1rem;
+}
+.box6 {
+  background-color: var(--color_p2);
+  position: relative;
+}
+
+.box6::before {
+  /* border: 1px solid lightblue; */
+  width: 30%;
+  height: 15%;
+  top: -15%;
+  right: -30%;
+  background: url(./img/bg6_fire.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.box6::after {
+  /* border: 1px solid lightblue; */
+  width: 40%;
+  padding-top: 40%;
+  top: 40%;
+  right: -50%;
+  background: url(./img/bg8_Jupiter.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.box6 img {
+  width: 80%;
+  margin-left: 10%;
+}
+.box6 .fac_name {
+  font-size: 18px;
+  color: #0c1946;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.box6 span {
+}
+.box7 {
+  background-color: var(--color_p1);
+  position: relative;
+}
+
+.box7::before {
+  /* border: 1px solid lightblue; */
+  width: 20%;
+  height: 25%;
+  top: -30%;
+  right: 5%;
+  background: url(./img/bg7_fish.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+/* !!span 으로 구조문 작성 후 
+block으로 해결  */
+.box7 span {
+  display: block;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.sec3 {
+  border: 3px solid var(--color_p1);
+  border-radius: 40px;
+  margin: 2rem 0 10rem 0;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.sec3::before {
+  /* border: 1px solid lightblue; */
+  width: 20%;
+  padding-top: 10%;
+  left: -20%;
+  top: 50%;
+  background: url(./img/bg9_flag.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.sec3::after {
+  /* border: 1px solid lightblue; */
+  width: 10%;
+  padding-top: 10%;
+  top: 110%;
+  left: 40%;
+  background: url(./img/bg10_Statellite2.png) no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.sec3 div {
+  display: flex;
+}
+
+.sec3 div > a {
+  margin-left: 2rem;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+.sec3 div > a::after {
+  content: "|";
+  position: absolute;
+  top: -2px;
+  /* border: 1px solid lightcoral; */
+  width: 20px;
+  text-align: center;
+}
+
+.sec3 li a {
+  transition: 0.3s;
+}
+.sec3 li a:hover {
+  color: #f2d555;
+}
+
+.sec3 ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-left: 3rem;
+}
+
+/* footer */
+
+.footAll {
+  border-top: 2px solid #ffffff;
+  margin-top: 10%;
+}
+.foot {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.foot p {
+  color: #ffffff;
+  margin-left: 3rem;
+}
+
+.ham {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    background-color: #030c10;
+  }
+  .hd .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  .ham {
+    display: block;
+    margin: 0.5rem 1rem;
+    color: #ffffff;
+    font-size: 30px;
+    padding-bottom: 40px;
+  }
+  .hd .top_icons,
+  .hd .gnb {
+    display: none;
+  }
+
+  .gnb.on {
+    border: 2px solid lightblue;
+    border-radius: 1rem;
+    /* position: absolute; */
+    width: 100%;
+    left: 0;
+    height: calc(50vh - 100px);
+    z-index: 200;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 3rem;
+    background-color: #030c10;
+  }
+
+  .sec1 {
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  .sec1::before {
+    display: none;
+  }
+  .sec2 {
+    display: block;
+  }
+  .sec2 .box1 {
+    margin-top: 100px;
+    position: relative;
+  }
+
+  /* 가상태그 */
+  *::before,
+  *::after {
+    content: "";
+    position: absolute;
+    /* background-size: contain;
+    background-position: fixed; */
+  }
+  .box1::before {
+    display: none;
+  }
+  .box1::after {
+    /* border: 1px solid blue; */
+    width: 30%;
+    height: 30%;
+    top: -33%;
+    left: 5%;
+
+    background: url(./img/mobile_back_1.png) no-repeat;
+    background-size: contain;
+    background-position: fixed;
+  }
+  .sec2 .box2 {
+    margin-top: 4rem;
+    position: relative;
+  }
+
+  .box2::before {
+    /* border: 1px solid blue; */
+    width: 20%;
+    height: 40%;
+    top: -40%;
+    right: 5%;
+    background: url(./img/mobile_back_2.png) no-repeat;
+    background-size: contain;
+    background-position: fixed;
+  }
+
+  .box2_2 {
+    margin-top: 130px;
+  }
+
+  .box3 {
+    margin-top: 40%;
+  }
+
+  .box3::before {
+    display: none;
+  }
+
+  .box4 {
+    margin-top: 15%;
+    position: relative;
+  }
+  .box4::before {
+    display: none;
+  }
+  .box4::after {
+    /* border: 1px solid blue; */
+    width: 25%;
+    height: 100%;
+    background: url(./img/mobile_back_3.png) no-repeat;
+    background-size: contain;
+    top: -100%;
+    left: 40%;
+  }
+  .box4_1 {
+    padding: 1rem;
+  }
+  .box4_2 {
+    margin-top: 40px;
+    padding: 1.5rem;
+  }
+
+  .box5 {
+    margin-top: 20%;
+    height: 600px;
+    position: relative;
+  }
+  .box5::before {
+    display: none;
+  }
+  .box5::after {
+    /* border: 1px solid blue; */
+    width: 20%;
+    height: 20%;
+    background: url(./img/mobile_back_4.png) no-repeat;
+    background-size: contain;
+    bottom: -23%;
+  }
+  .box6 {
+    margin-top: 20%;
+    height: 700px;
+  }
+  .box6::after,
+  .box6::before {
+    display: none;
+  }
+
+  .box7 {
+    margin-top: 20%;
+  }
+  .box7::before {
+    display: none;
+  }
+  .box7::after {
+    /* border: 1px solid blue; */
+    width: 20%;
+    height: 30%;
+    background: url(./img/mobile_back_5.png) no-repeat;
+    background-size: contain;
+    top: -30%;
+    right: 5%;
+  }
+
+  .sec3 {
+    display: none;
+  }
+}
