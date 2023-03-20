@@ -1,0 +1,562 @@
+:root {
+  --mw: 1440px;
+  --width: calc(100% - 4rem);
+  --gap1: 0.5rem;
+  --gap2: 4rem;
+  --font_logo1_700: "Noto Sans KR", sans-serif;
+  --font_logo2_100: "Noto Sans KR", sans-serif;
+  --font_con_title_500: "Noto Sans KR", sans-serif;
+  --font_con_intro1_400: "Noto Sans KR", sans-serif;
+  --font_con_intro2_300: "Noto Sans KR", sans-serif;
+  --font_color: #ffffff;
+  --font_color2: #000000;
+  --bg: #0c1946;
+  --color_p1: #f2d555;
+  --color_p2: #afc6d0;
+  --color_p3: #53a576;
+  --color_p4: #c7d6cc;
+  --color_p4: #e38489;
+  --font_size_con: 20px;
+}
+body {
+  background: linear-gradient(
+    45deg,
+    #0c1946,
+    #1b2c69,
+    #36488b,
+    #6270a3,
+    #0c1946,
+    #0c1946
+  );
+  background-size: 500% 500%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mw {
+  max-width: var(--mw);
+  width: var(--width);
+  margin: auto;
+}
+
+a {
+  color: var(--font_color);
+}
+
+.hd {
+  margin-top: 3rem;
+  position: relative;
+  z-index: 100;
+}
+
+.hd .logo {
+  text-align: center;
+}
+
+.logo a {
+  font-family: var(--font_logo1_700);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 2rem;
+}
+
+.logo span {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.top_icons {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top_icons a,
+.top_icons i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}
+
+.top_icons a:hover {
+  font-weight: bold;
+  color: #c7d6cc;
+}
+
+/* nav */
+
+.gnb {
+  margin-top: 2rem;
+}
+.gnb a {
+  font-size: 24px;
+}
+
+.depth_1 {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  /* align-items: center; */
+  position: relative;
+}
+
+.depth_2 {
+  margin-top: 1rem;
+  line-height: 2.5rem;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.depth_1 > li {
+  /* border: 1px solid red; */
+  width: 20%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.depth_1 > li::before {
+  content: "";
+  position: absolute;
+  background-color: #c7d6cc;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 0;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.depth_2 a {
+  font-size: 20px;
+}
+.depth_1 > li > a {
+  display: block;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.depth_1 > li:hover::before {
+  height: 350px;
+}
+
+.depth_1 > li:hover a {
+  color: #0c1946;
+  opacity: 70%;
+  font-weight: bold;
+}
+
+.depth_1 li:hover .depth_2 {
+  height: 300px;
+}
+
+.depth_2 li:hover a {
+  opacity: 100%;
+}
+
+.ham {
+  display: none;
+}
+
+/* section */
+
+.section_All {
+  margin-top: 10%;
+}
+.sec1 {
+  position: relative;
+}
+.sec1 img,
+.sec2 img,
+.sec3 img {
+  border: 1px solid red;
+  position: relative;
+}
+
+.sec1 .step,
+.sec2 .step,
+.sec3 .step {
+  position: absolute;
+  top: 13px;
+  left: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sec1 .tab {
+  border: 2px solid #000000;
+  display: flex;
+  background-color: #d9d9d9;
+}
+
+.sec1 .tab_con {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid blue;
+  /* 이부분의 넓이..oh */
+  width: 100%;
+}
+/* 개인예약 단체예약 부분을 떨어지게 하고 ㅣ싶어요
+오잉 어떻게 떨어지게는 했어요 */
+.tab .reserve_btn {
+  border: 1px solid lightskyblue;
+  border-radius: 1rem;
+  /* text-align: center; */
+  position: relative;
+  width: 20%;
+}
+
+.reserve_btn div {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  height: 50%;
+}
+
+.btn1,
+.btn2 {
+  position: absolute;
+  border: 5px solid red;
+  top: 20%;
+  margin-left: 30%;
+}
+
+.btn2 {
+  top: 70%;
+}
+
+.box1 {
+  width: 50%;
+}
+.box1 h2,
+.box2 h3 {
+  /* border: 1px solid lightcoral; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.box1 h2 {
+  padding: 1rem 0;
+}
+.box2 {
+  border-radius: 1rem;
+  width: 50%;
+  padding: 1rem;
+  margin-left: 1rem;
+  background-color: #ffffff;
+}
+.box2 h3 {
+  padding-bottom: 1.2rem;
+}
+.box3 {
+  /* width: 100%; */
+  /* text-align: center; */
+  display: none;
+}
+
+.item.on {
+  display: block;
+}
+
+.item {
+  display: none;
+}
+
+.title {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  background-color: #99999920;
+}
+
+.title span {
+  width: 25%;
+  text-align: center;
+}
+
+.list > label {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  width: 100%;
+  border-bottom: 1px dotted lightgray;
+  padding: 1rem 0;
+}
+.list > label > * {
+  width: 25%;
+  text-align: center;
+}
+/* section2 */
+
+.sec2 {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.sec2 .reservation {
+  border: 1px solid;
+  display: flex;
+  background-color: lightgray;
+}
+.reservation h2 {
+  border: 1px solid;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0.5rem;
+}
+
+.reservation_1 {
+  border: 3px solid blue;
+  padding: 2rem;
+  width: 60%;
+}
+
+.reservation_1 p {
+  border: 1px solid;
+  padding: 1.5rem;
+}
+.reservation_1 input {
+  border: 3px solid lightblue;
+  width: 50%;
+}
+
+.reservation_2 {
+  border: 3px solid blue;
+  padding: 2rem;
+  margin-left: 1rem;
+  width: 40%;
+}
+
+.reservation_2 p {
+  padding: 0.5rem;
+  border: 1px solid;
+}
+
+/* section3 */
+
+.sec3 {
+  position: relative;
+  margin: 3rem 0;
+}
+
+.sec3 .consent {
+  border: 1px solid;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.consent h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.consent p {
+  padding: 0.75rem;
+}
+.consent span {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.sec3 button {
+  width: 20%;
+  height: 50px;
+  margin-top: 2rem;
+  margin-left: 40%;
+}
+/* footer */
+
+.footAll {
+  border-top: 2px solid #ffffff;
+  margin-top: 10%;
+}
+.foot {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.foot p {
+  color: #ffffff;
+  margin-left: 3rem;
+}
+
+/* calendar */
+
+:root {
+  --calendar-bg-color: #ffffff;
+  --calendar-font-color: #000000;
+  --weekdays-border-bottom-color: #404040;
+  --calendar-date-hover-color: #505050;
+  --calendar-current-date-color: #ebebeb;
+  --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
+  --calendar-today-innerborder-color: transparent;
+  --calendar-nextprev-bg-color: transparent;
+  --next-prev-arrow-color: #fff;
+  --calendar-border-radius: 16px;
+  --calendar-prevnext-date-color: #484848;
+}
+
+.calendar {
+  font-family: "IBM Plex Sans", sans-serif;
+  position: relative;
+  /* max-width: 400px; 
+      change as per your design need  */
+  /* min-width: 320px; */
+  background: var(--calendar-bg-color);
+  color: var(--calendar-font-color);
+  /* margin: 20px auto; */
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: normal;
+  border-radius: var(--calendar-border-radius);
+}
+
+.calendar-inner {
+  padding: 10px 10px;
+}
+
+.calendar .calendar-inner .calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar .calendar-inner .calendar-body div {
+  padding: 4px;
+  /* min-height: 30px; */
+  /* line-height: 30px; */
+  border: 1px solid transparent;
+  margin: 10px 2px 0px;
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n + 7) {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n + 7):hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div > a {
+  color: var(--calendar-font-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-body div:hover {
+  border: 1px solid var(--calendar-date-hover-color);
+  border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+  border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+  display: grid;
+  text-align: center;
+  cursor: pointer;
+  margin: 3px 0px;
+  background: var(--calendar-current-date-color);
+  padding: 8px 0px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  border: 1px solid;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+  display: flex;
+  min-width: 100px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next {
+  text-align: right;
+}
+
+.calendar
+  .calendar-inner
+  .calendar-controls
+  .calendar-year-month
+  .calendar-year-label,
+.calendar
+  .calendar-inner
+  .calendar-controls
+  .calendar-year-month
+  .calendar-month-label {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today {
+  background: var(--calendar-today-color);
+  border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+  border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today a {
+  outline: 2px solid var(--calendar-today-innerborder-color);
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+  color: var(--calendar-font-color);
+  font-family: arial, consolas, sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  padding: 4px 12px;
+  display: inline-block;
+  background: var(--calendar-nextprev-bg-color);
+  margin: 10px 0 10px 0;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg {
+  height: 20px;
+  width: 20px;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
+  fill: var(--next-prev-arrow-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates,
+.calendar .calendar-inner .calendar-body .next-dates {
+  color: var(--calendar-prevnext-date-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates:hover,
+.calendar .calendar-inner .calendar-body .next-dates:hover {
+  border: 1px solid transparent;
+  pointer-events: none;
+}

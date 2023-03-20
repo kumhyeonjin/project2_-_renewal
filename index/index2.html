@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../my_reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/common2.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script> -->
+    <script src="../js/common2.js" defer></script>
+  </head>
+  <body>
+    <header class="hd mw">
+      <h1 class="logo">
+        <a href="./index.html"
+          >대전시민천문대 <br />
+          <span> DAEJEON OBSERVATORY</span></a
+        >
+        <div class="ham"><i class="fa-solid fa-bars"></i></div>
+      </h1>
+      <div class="top_icons">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i>검색</a>
+
+        <a href="#"
+          ><i class="fa-sharp fa-solid fa-right-to-bracket"></i>로그인</a
+        >
+        <a href="#"><i class="fa-solid fa-user"></i>회원가입</a>
+      </div>
+
+      <nav class="gnb on">
+        <ul class="depth_1">
+          <li>
+            <a href="#">천문대소개</a>
+            <ul class="depth_2">
+              <li><a href="#">인사말</a></li>
+              <li><a href="#">현황 및 조직도</a></li>
+              <li><a href="#">시설안내</a></li>
+              <li><a href="#">홍보자료</a></li>
+              <li><a href="#">찾아오시는 길</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">이용안내</a>
+            <ul class="depth_2">
+              <li><a href="#">관람시간안내</a></li>
+              <li><a href="#">프로그램소개</a></li>
+              <li><a href="#">천문정보</a></li>
+              <li><a href="#">행사사진</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">참여마당</a>
+            <ul class="depth_2">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">질문과답변</a></li>
+              <li><a href="#">방문후기</a></li>
+              <li><a href="#">자주하는질문</a></li>
+              <li><a href="#">봉사활동</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">예약마당</a>
+            <ul class="depth_2">
+              <li><a href="#">관람예약</a></li>
+              <li><a href="#">별음악회/시낭송회예약</a></li>
+              <li><a href="#">특별 프로그램 예약</a></li>
+              <li><a href="#">봉사활동예약</a></li>
+              <li><a href="#">예약확인/취소</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="section_All mw">
+      <section class="sec1">
+        <div>
+          <img src="../img/arrow.png" alt="step1" />
+          <span class="step">step1</span>
+        </div>
+        <div class="tab">
+          <div class="reserve_btn">
+            <div><input type="button" value="개인예약" class="btn1" /></div>
+            <input type="button" value="단체예약" class="btn2" />
+          </div>
+          <div class="tab_con">
+            <div class="box1 calendar">
+              <h2>관람일 선택</h2>
+              <!-- <div class="calendar"></div> -->
+            </div>
+            <div class="box2">
+              <h3>관람시간 선택</h3>
+              <div class="item on person">
+                <p class="title">
+                  <span class="t1">선택</span>
+                  <span class="t2">구분</span>
+                  <span class="t3">시간</span>
+                  <span class="t4">예약</span>
+                </p>
+                <ul>
+                  <li class="list">
+                    <label>
+                      <input type="radio" name="list" />
+                      <span class="t_t1">1</span>
+                      <span class="t_t2">15:10</span>
+                      <span class="t_t3">예약가능</span>
+                    </label>
+                    <!-- <input type="button" value="예약가능" /> -->
+                  </li>
+                  <!-- list의 반복 -->
+                  <li class="list">
+                    <label>
+                      <input type="radio" name="list" disabled />
+                      <span class="t_t1">1</span>
+                      <span class="t_t2">15:10</span>
+                      <span class="t_t3">예약불가</span>
+                    </label>
+                    <!-- <input type="button" value="예약불가" /> -->
+                  </li>
+                  <li class="list">
+                    <label>
+                      <input type="radio" name="list" />
+                      <span class="t_t1">1</span>
+                      <span class="t_t2">15:10</span>
+                      <span class="t_t3">예약가능</span>
+                    </label>
+                    <!-- <input type="button" value="예약가능" /> -->
+                  </li>
+                  <li class="list">
+                    <label>
+                      <input type="radio" name="list" />
+                      <span class="t_t1">1</span>
+                      <span class="t_t2">15:10</span>
+                      <span class="t_t3">예약가능</span>
+                    </label>
+                    <!-- <input type="button" value="예약가능" /> -->
+                  </li>
+                  <li class="list">
+                    <label>
+                      <input type="radio" name="list" />
+                      <span class="t_t1">1</span>
+                      <span class="t_t2">15:10</span>
+                      <span class="t_t3">예약가능</span>
+                    </label>
+                    <!-- <input type="button" value="예약가능" /> -->
+                  </li>
+                  <!-- 반복끝 -->
+                </ul>
+              </div>
+              <!-- <div class="item on team">단체예약</div> -->
+            </div>
+            <div class="box3">
+              <input type="submit" value="완료" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec2">
+        <div>
+          <img src="../img/arrow.png" alt="step2" />
+          <span class="step">step2</span>
+        </div>
+        <div class="reservation">
+          <div class="reservation_1">
+            <h2>예약자 정보</h2>
+            <form>
+              <p>
+                <label for="username">예약자명</label>
+                <input type="text" id="username" name="username" required />
+                <span class="error" id="username_error"></span>
+              </p>
+              <p>
+                <label for="tel">전화번호</label>
+                <input type="tel" id="phone" name="phone" required />
+                <span class="error" id="username_error"></span>
+              </p>
+              <p>
+                <label for="email">이메일</label>
+                <input type="text" id="email" name="email" required />
+                <span class="error" id="email_error"></span>
+              </p>
+              <p>
+                <label for="password">비밀번호</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="예약 확인 시 필요하오니 반드시 입력하십시오"
+                />
+                <span class="error" id="password_error"></span>
+              </p>
+            </form>
+          </div>
+          <div class="reservation_2">
+            <h2>*단체관람예약시 작성</h2>
+            <form>
+              <p>
+                <label for="username">단체명</label>
+                <input type="text" id="username2" name="username2" required />
+                <span class="error" id="username_error2"></span>
+              </p>
+              <p>
+                <label for="username">지역</label>
+                <select name="location" id="location">
+                  <option value="none">지역선택</option>
+                  <option value="daejeon">대전</option>
+                  <option value="sejong">세종</option>
+                  <option value="seoul">서울</option>
+                  <option value="gangwon">강원</option>
+                  <option value="gg">경기</option>
+                  <option value="gnam">경남</option>
+                  <option value="gbuk">경북</option>
+                  <option value="jeonnam">전남</option>
+                  <option value="jeonbuk">전북</option>
+                  <option value="chungnam">충남</option>
+                  <option value="chungbuk">충북</option>
+                  <option value="busan">부산</option>
+                  <option value="daegu">대구</option>
+                  <option value="incheon">인천</option>
+                  <option value="gwangju">광주</option>
+                  <option value="ulsan">울산</option>
+                  <option value="ulleung">울릉도</option>
+                  <option value="jeju">제주도</option>
+                </select>
+              </p>
+              <p>
+                <label for="number">관람인원</label>
+                <input type="text" id="number" name="number" required />
+                <span class="error" id="number"></span>
+              </p>
+              <p>
+                <label for="text">평균연령</label>
+                <input type="text" id="age" name="age" required />
+                <span class="error" id="age"></span>
+              </p>
+              <p>
+                <label for="select">인솔자</label>
+                <select name="leader" id="leader">
+                  <option value="none">인솔자 유/무</option>
+                  <option value="exist">있음</option>
+                  <option value="exist_none">없음</option>
+                </select>
+              </p>
+              <p>
+                <label for="text">기타사항</label>
+                <textarea
+                  name="ref_note"
+                  id="ref_note"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="sec3">
+        <div>
+          <img src="../img/arrow.png" alt="step3" />
+          <span class="step">step3</span>
+        </div>
+        <div class="consent">
+          <h2>개인정보 수집 및 이용동의</h2>
+
+          <p>
+            <span>정보의 수집이용 목적</span> <br />
+            '대전시민천문대'이(가) 수집하는 사용자의 개인정보는 교육/관람 예약
+            서비스를 위한 목적으로 수집하여 이 외의 목적으로 일체 사용하지
+            않습니다. <br />
+          </p>
+          <p>
+            <span>개인정보의 수집범위</span> <br />
+            '대전시민천문대'이(가) 교육/관람 예약 서비스를 위한 목적으로
+            수집하는 개인정보는 다음과 같습니다. <br />
+            -필수항목: 이름, 비밀번호, 이메일주소, 연락처 <br />
+          </p>
+          <p>
+            <span>개인정보 보유기간</span> <br />
+            개인정보는 정보 확인 후 1년 이내 파기 됩니다. <br />
+            위 내용에 동의하지 않을 시 서비스 이용이 제한될 수 있습니다. <br />
+          </p>
+          <label for="checkbox">위 내용에 동의하며 개인정보를 제공합니다</label>
+          <input type="checkbox" />
+        </div>
+        <button>예약하기</button>
+      </section>
+    </section>
+    <footer class="footAll">
+      <div class="foot mw">
+        <h1 class="logo">
+          <a href="#"
+            >대전시민천문대 <br />
+            <span> DAEJEON OBSERVATORY</span></a
+          >
+        </h1>
+        <div>
+          <p>
+            (34128) 대전광역시 유성구 과학로 213-48 (신성동 7-13) <br />
+            TEL. 042-863-8762, 8763 <br />
+            FAX. 042-863-8761 <br />
+            Copyright ® 2017 Daejeon Observartory. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

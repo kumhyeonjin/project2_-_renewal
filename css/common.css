@@ -22,12 +22,14 @@ body {
   background: linear-gradient(
     45deg,
     #0c1946,
+    #0c1946,
     #1b2c69,
     #36488b,
     #6270a3,
+    #0c1946,
     #0c1946
   );
-  background-size: 400% 400%;
+  background-size: 400%, 400%;
   animation: gradient 10s ease infinite;
 }
 
@@ -206,7 +208,7 @@ main {
   padding-top: 80%;
   top: -150%;
   left: -60%;
-  background: url(./img/bg1_moon.png) no-repeat;
+  background: url(../img/bg1_moon.png) no-repeat;
   background-size: contain;
 }
 .sec1 div {
@@ -254,7 +256,6 @@ main {
 .box6 p,
 .box7 p {
   line-height: 2rem;
-  border: 1px solid red;
   padding: 1rem 0;
   /* 중앙정렬을 하고 싶었어요 */
   text-align: center;
@@ -290,19 +291,18 @@ display:block ? */
   width: 15%;
   height: 20%;
   top: -20%;
-  background: url(./img/bg3_spacecraft.png) no-repeat;
+  background: url(../img/bg3_spacecraft.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
 .box2 {
-  border: 1px solid red;
   position: relative;
   /* 이영역은 뭐야;; */
 }
 
 .box2_1,
 .box2_2 {
-  border: 2px solid #000000;
+  border: 3px solid #000000;
   border-radius: var(--gap1);
   line-height: 1.5rem;
   padding: 1rem 0;
@@ -335,7 +335,7 @@ display:block ? */
   height: 100%;
   right: -60%;
   top: -60%;
-  background: url(./img/bg2_Big_person.png) no-repeat;
+  background: url(../img/bg2_Big_person.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -347,7 +347,7 @@ display:block ? */
   /* border: 1px solid lightblue; */
   width: 30%;
   height: 50%;
-  background: url(./img/bg4_Satellite.png) no-repeat;
+  background: url(../img/bg4_Satellite.png) no-repeat;
   background-size: contain;
   background-position: bottom;
   top: 25%;
@@ -398,7 +398,7 @@ display:block ? */
   height: 20%;
   top: -20%;
   right: 0;
-  background: url(./img/bg5_Small_person.png) no-repeat;
+  background: url(../img/bg5_Small_person.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -447,7 +447,7 @@ display:block ? */
   height: 15%;
   top: -15%;
   right: -30%;
-  background: url(./img/bg6_fire.png) no-repeat;
+  background: url(../img/bg6_fire.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -458,7 +458,7 @@ display:block ? */
   padding-top: 40%;
   top: 40%;
   right: -50%;
-  background: url(./img/bg8_Jupiter.png) no-repeat;
+  background: url(../img/bg8_Jupiter.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -487,7 +487,7 @@ display:block ? */
   height: 25%;
   top: -30%;
   right: 5%;
-  background: url(./img/bg7_fish.png) no-repeat;
+  background: url(../img/bg7_fish.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -514,7 +514,7 @@ block으로 해결  */
   padding-top: 10%;
   left: -20%;
   top: 50%;
-  background: url(./img/bg9_flag.png) no-repeat;
+  background: url(../img/bg9_flag.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -525,7 +525,7 @@ block으로 해결  */
   padding-top: 10%;
   top: 110%;
   left: 40%;
-  background: url(./img/bg10_Statellite2.png) no-repeat;
+  background: url(../img/bg10_Statellite2.png) no-repeat;
   background-size: contain;
   background-position: bottom;
 }
@@ -656,7 +656,7 @@ block으로 해결  */
     top: -33%;
     left: 5%;
 
-    background: url(./img/mobile_back_1.png) no-repeat;
+    background: url(../img/mobile_back_1.png) no-repeat;
     background-size: contain;
     background-position: fixed;
   }
@@ -671,7 +671,7 @@ block으로 해결  */
     height: 40%;
     top: -40%;
     right: 5%;
-    background: url(./img/mobile_back_2.png) no-repeat;
+    background: url(../img/mobile_back_2.png) no-repeat;
     background-size: contain;
     background-position: fixed;
   }
@@ -699,7 +699,7 @@ block으로 해결  */
     /* border: 1px solid blue; */
     width: 25%;
     height: 100%;
-    background: url(./img/mobile_back_3.png) no-repeat;
+    background: url(../img/mobile_back_3.png) no-repeat;
     background-size: contain;
     top: -100%;
     left: 40%;
@@ -724,7 +724,7 @@ block으로 해결  */
     /* border: 1px solid blue; */
     width: 20%;
     height: 20%;
-    background: url(./img/mobile_back_4.png) no-repeat;
+    background: url(../img/mobile_back_4.png) no-repeat;
     background-size: contain;
     bottom: -23%;
   }
@@ -747,7 +747,7 @@ block으로 해결  */
     /* border: 1px solid blue; */
     width: 20%;
     height: 30%;
-    background: url(./img/mobile_back_5.png) no-repeat;
+    background: url(../img/mobile_back_5.png) no-repeat;
     background-size: contain;
     top: -30%;
     right: 5%;
@@ -755,5 +755,13 @@ block으로 해결  */
 
   .sec3 {
     display: none;
+  }
+
+  .foot .logo {
+    display: none;
+  }
+  .foot p {
+    margin: 0.5rem 0;
+    font-size: 12px;
   }
 }
