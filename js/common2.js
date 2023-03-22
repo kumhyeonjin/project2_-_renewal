@@ -1,3 +1,10 @@
+// 햄버거
+const $ham = document.querySelector(".ham");
+const $Gnb = document.querySelector(".gnb");
+$ham.addEventListener("click", function () {
+  $Gnb.classList.toggle("on");
+});
+
 // calendar
 
 function CalendarControl() {
